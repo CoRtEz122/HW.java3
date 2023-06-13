@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import javax.management.openmbean.ArrayType;
 import javax.swing.event.ListDataEvent;
 
 public class HomeWork2 {
@@ -21,20 +22,7 @@ public class HomeWork2 {
 
     public static void main(String[] args) {
 
-        removeEven(null);
-
-        findMin(null);
-
-        findMax(null);
-
-        average(null);
-
-    }
-
-        public static void removeEven(ArrayList<Integer> list){
-            
-        
-        list = new ArrayList<>();
+        ArrayList list = new ArrayList<Integer>();
 
         list.add(15);
         list.add(22);
@@ -47,6 +35,15 @@ public class HomeWork2 {
         list.add(14);
         list.add(19);
 
+        removeEven(list);
+        findMin(list);
+        findMax(list);
+        average(list);
+
+    }
+
+    public static void removeEven(ArrayList<Integer> list) {
+
         for (int i = 0; i < list.size(); i++) {
 
             int x = list.get(i);
@@ -58,73 +55,32 @@ public class HomeWork2 {
             }
         }
         System.out.print("Задание 1:  " + list + ",");
-    }    
-    
+    }
 
-   public static void findMin(ArrayList<Integer>list){
+    public static void findMin(ArrayList<Integer> list) {
 
-    list = new ArrayList<>();
+        System.out.println();
+        System.out.println("Задание 2: Минимальное число списка - " + Collections.min(list));
 
-    list.add(15);
-    list.add(22);
-    list.add(65);
-    list.add(14);
-    list.add(15);
-    list.add(87);
-    list.add(23);
-    list.add(22);
-    list.add(14);
-    list.add(19);
+    }
 
-System.out.println();
-System.out.println("Задание 2: Минимальное число списка - "+Collections.min(list));
+    public static void findMax(ArrayList<Integer> list) {
 
-}
+        System.out.println("Задание 3: Максимальное число списка - " + Collections.max(list));
 
-public static void findMax(ArrayList<Integer>list){
+    }
 
-    list = new ArrayList<>();
+    public static void average(ArrayList<Integer> list) {
 
-    list.add(15);
-    list.add(22);
-    list.add(65);
-    list.add(14);
-    list.add(15);
-    list.add(87);
-    list.add(23);
-    list.add(22);
-    list.add(14);
-    list.add(19);
+        double result = 0;
+        for (int j = 0; j < list.size(); j++) {
 
+            int x = list.get(j);
 
-System.out.println("Задание 3: Максимальное число списка - "+Collections.max(list));
+            result += x;
+        }
+
+        System.out.println("Задание 4: Среднее значение списка - " + result / list.size());
+    }
 
 }
-
-
-public static void average(ArrayList<Integer>list){
-
-    list = new ArrayList<>();
-    list.add(15);
-    list.add(22);
-    list.add(65);
-    list.add(14);
-    list.add(15);
-    list.add(87);
-    list.add(23);
-    list.add(22);
-    list.add(14);
-    list.add(19);
-
-double result = 0;
-for (int j = 0; j < list.size(); j++) {
-
-int x = list.get(j);
-
-result +=x;
-}
-
-System.out.println("Задание 4: Среднее значение списка - "+result/list.size());
-}
-
- }
