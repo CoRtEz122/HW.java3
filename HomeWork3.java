@@ -53,7 +53,7 @@ public class HomeWork3 {
                 //     revstorage.add(storage.get(i));
 
                 // }
-                // System.out.println(revstorage);
+                 System.out.println(/*revstorage*/storage);
 
             }
 
